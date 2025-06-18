@@ -96,14 +96,24 @@ const App = () => {
           <h2 className="sub-title">My name is Kishore Narayanan.</h2>
           <p className="description">I build intelligent systems and bring hardware to life. Let's explore the possibilities.</p>
           <div className="central-visual">
-            <div className="neural-network">
-              <div className="node"></div>
-              <div className="node"></div>
-              <div className="node"></div>
-              <div className="node"></div>
-              <div className="connection"></div>
-              <div className="connection connection-2"></div>
-              <div className="connection connection-3"></div>
+            <div className="wireframe-processor">
+              <div className="processor-core">
+                <div className="core-layer layer-1"></div>
+                <div className="core-layer layer-2"></div>
+                <div className="core-layer layer-3"></div>
+                <div className="circuit-lines">
+                  <div className="circuit-line line-1"></div>
+                  <div className="circuit-line line-2"></div>
+                  <div className="circuit-line line-3"></div>
+                  <div className="circuit-line line-4"></div>
+                </div>
+                <div className="data-nodes">
+                  <div className="data-node node-1"></div>
+                  <div className="data-node node-2"></div>
+                  <div className="data-node node-3"></div>
+                  <div className="data-node node-4"></div>
+                </div>
+              </div>
             </div>
           </div>
           <button 
