@@ -423,8 +423,8 @@ const App = () => {
             <div className="social-links">
               <h3>// EXTERNAL NETWORK RELAYS</h3>
               <div className="social-buttons">
-                <a href="#" className="social-btn">LINKEDIN_RELAY</a>
-                <a href="#" className="social-btn">GITHUB_REPOSITORY</a>
+                <a href="https://www.linkedin.com/in/kishore-narayanan-3aab34277/" target="_blank" rel="noopener noreferrer" className="social-btn">LINKEDIN_RELAY</a>
+                <a href="https://github.com/kishore2099" target="_blank" rel="noopener noreferrer" className="social-btn">GITHUB_REPOSITORY</a>
               </div>
             </div>
           </div>
