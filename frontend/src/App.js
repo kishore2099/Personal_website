@@ -171,7 +171,8 @@ const App = () => {
         status: "COMPLETED",
         details: "Developed a sophisticated robotics control system leveraging the BNO055's fusion algorithms for accurate orientation tracking. Utilized QT Py microcontrollers for compact, efficient processing and Dupont connectors for reliable prototyping connections.",
         techStack: ["Adafruit BNO055", "QT Py", "Python", "I2C Protocol", "Sensor Fusion"],
-        images: ["sensor-setup.jpg", "robot-prototype.jpg"]
+        images: ["sensor-setup.jpg", "robot-prototype.jpg"],
+        githubUrl: "https://github.com/kishore2099/robotics-bno055-integration"
       },
       {
         name: "IoT Patent Development", 
@@ -179,7 +180,8 @@ const App = () => {
         status: "COMPLETED",
         details: "Architected and documented a comprehensive IoT system for patent filing. Created detailed flowcharts and CAD visuals to illustrate system architecture, data flow, and hardware integration. The project required meticulous documentation standards for intellectual property protection.",
         techStack: ["Arduino", "ESP32", "CAD Design", "System Architecture", "Patent Documentation"],
-        images: ["flowchart.jpg", "cad-design.jpg"]
+        images: ["flowchart.jpg", "cad-design.jpg"],
+        githubUrl: "https://github.com/kishore2099/iot-patent-prototype"
       },
       {
         name: "Interactive 3D Model Viewer",
@@ -187,7 +189,8 @@ const App = () => {
         status: "COMPLETED",
         details: "Developed a responsive web application for showcasing 3D models created in Blender. Focused on maintaining visual fidelity while optimizing performance for web deployment. Implemented interactive controls for model rotation, zoom, and lighting adjustments.",
         techStack: ["Blender", "Three.js", "WebGL", "JavaScript", "3D Optimization"],
-        images: ["3d-viewer.jpg", "blender-model.jpg"]
+        images: ["3d-viewer.jpg", "blender-model.jpg"],
+        githubUrl: "https://github.com/kishore2099/interactive-3d-viewer"
       }
     ];
 
