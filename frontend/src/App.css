@@ -227,62 +227,213 @@ body {
   display: flex;
   justify-content: center;
   margin: 50px 0;
+  perspective: 1000px;
 }
 
-.neural-network {
+.wireframe-processor {
   position: relative;
+  width: 250px;
+  height: 250px;
+  animation: floatRotate 8s infinite ease-in-out;
+}
+
+.processor-core {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: coreRotate 12s infinite linear;
+}
+
+.core-layer {
+  position: absolute;
+  border: 2px solid;
+  background: transparent;
+}
+
+.layer-1 {
   width: 200px;
   height: 200px;
+  top: 25px;
+  left: 25px;
+  border-color: #00FFFF;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  animation: layer1Pulse 3s infinite;
 }
 
-.node {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: #32CD32;
-  border-radius: 50%;
-  box-shadow: 0 0 20px rgba(50, 205, 50, 0.5);
-  animation: pulse 2s infinite;
-}
-
-.node:nth-child(1) { top: 20px; left: 90px; }
-.node:nth-child(2) { top: 80px; left: 40px; }
-.node:nth-child(3) { top: 80px; right: 40px; }
-.node:nth-child(4) { bottom: 20px; left: 90px; }
-
-.connection {
-  position: absolute;
-  height: 2px;
-  background: linear-gradient(90deg, #32CD32, #00FFFF);
-  opacity: 0.7;
-  animation: dataFlow 3s infinite;
-}
-
-.connection:nth-child(5) {
-  top: 30px;
+.layer-2 {
+  width: 150px;
+  height: 150px;
+  top: 50px;
   left: 50px;
-  width: 60px;
-  transform: rotate(45deg);
+  border-color: #FF00FF;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+  animation: layer2Pulse 3s infinite 1s;
 }
 
-.connection-2 {
-  top: 30px;
-  right: 50px;
-  width: 60px;
-  transform: rotate(-45deg);
+.layer-3 {
+  width: 100px;
+  height: 100px;
+  top: 75px;
+  left: 75px;
+  border-color: #32CD32;
+  box-shadow: 0 0 10px rgba(50, 205, 50, 0.3);
+  animation: layer3Pulse 3s infinite 2s;
+}
+
+.circuit-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.circuit-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, #00FFFF, transparent);
+  height: 2px;
+  animation: dataFlow 4s infinite;
+}
+
+.line-1 {
+  top: 50px;
+  left: 0;
+  width: 100%;
+  animation-delay: 0s;
+}
+
+.line-2 {
+  top: 125px;
+  left: 50px;
+  width: 150px;
+  transform: rotate(45deg);
   animation-delay: 1s;
 }
 
-.connection-3 {
-  bottom: 30px;
-  left: 50px;
-  width: 100px;
+.line-3 {
+  top: 125px;
+  right: 50px;
+  width: 150px;
+  transform: rotate(-45deg);
   animation-delay: 2s;
 }
 
-@keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.7; }
+.line-4 {
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  animation-delay: 3s;
+}
+
+.data-nodes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.data-node {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #32CD32;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(50, 205, 50, 0.6);
+  animation: nodePulse 2s infinite;
+}
+
+.node-1 {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 0s;
+}
+
+.node-2 {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  animation-delay: 0.5s;
+}
+
+.node-3 {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  animation-delay: 1s;
+}
+
+.node-4 {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 1.5s;
+}
+
+@keyframes floatRotate {
+  0%, 100% { 
+    transform: translateY(0px) rotateY(0deg); 
+  }
+  25% { 
+    transform: translateY(-10px) rotateY(90deg); 
+  }
+  50% { 
+    transform: translateY(0px) rotateY(180deg); 
+  }
+  75% { 
+    transform: translateY(-10px) rotateY(270deg); 
+  }
+}
+
+@keyframes coreRotate {
+  from { 
+    transform: rotateZ(0deg) rotateX(15deg); 
+  }
+  to { 
+    transform: rotateZ(360deg) rotateX(15deg); 
+  }
+}
+
+@keyframes layer1Pulse {
+  0%, 100% { 
+    border-color: #00FFFF; 
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); 
+  }
+  50% { 
+    border-color: #FFFFFF; 
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6); 
+  }
+}
+
+@keyframes layer2Pulse {
+  0%, 100% { 
+    border-color: #FF00FF; 
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.3); 
+  }
+  50% { 
+    border-color: #FFFFFF; 
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.6); 
+  }
+}
+
+@keyframes layer3Pulse {
+  0%, 100% { 
+    border-color: #32CD32; 
+    box-shadow: 0 0 10px rgba(50, 205, 50, 0.3); 
+  }
+  50% { 
+    border-color: #FFFFFF; 
+    box-shadow: 0 0 20px rgba(50, 205, 50, 0.6); 
+  }
+}
+
+@keyframes nodePulse {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+  50% { 
+    transform: scale(1.5); 
+    opacity: 0.7; 
+  }
 }
 
 @keyframes dataFlow {
