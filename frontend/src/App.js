@@ -238,7 +238,7 @@ const App = () => {
                     ))}
                   </div>
                 </div>
-                <button className="github-link">{'>'} ACCESS SOURCE CODE</button>
+                <a href={selectedMission.githubUrl} target="_blank" rel="noopener noreferrer" className="github-link">{'>'} ACCESS SOURCE CODE</a>
               </div>
             </div>
           </div>
