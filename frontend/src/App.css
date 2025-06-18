@@ -654,11 +654,13 @@ body {
 }
 
 .github-link {
+  display: inline-block;
   background: transparent;
   color: #FF00FF;
   border: 2px solid #FF00FF;
   padding: 12px 24px;
   font-family: 'Fira Code', monospace;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -666,6 +668,8 @@ body {
 .github-link:hover {
   background: rgba(255, 0, 255, 0.1);
   box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+  color: #FF00FF;
+  text-decoration: none;
 }
 
 /* Skill Tree Section */
