@@ -473,7 +473,11 @@ const App = () => {
 
     if (!isOpen) {
       return (
-        <div className="command-trigger" onClick={() => setIsOpen(true)}>
+        <div 
+          className="command-trigger" 
+          onClick={() => setIsOpen(true)}
+          style={{ zIndex: 1002 }}
+        >
           _
         </div>
       );
